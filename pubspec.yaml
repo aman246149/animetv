@@ -48,9 +48,12 @@ dependencies:
 
   # Allows converting json to dart class and back 
   json_annotation: ^4.4.0
-
+  flutter_svg: ^1.1.6
+  loading_animation_widget: ^1.2.0+3
+  carousel_slider: ^4.1.1
   # Allows easier routing
   auto_route: ^4.2.0
+  cached_network_image: 
 
   google_fonts: ^3.0.1
 dev_dependencies:
@@ -81,8 +84,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

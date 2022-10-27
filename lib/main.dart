@@ -27,9 +27,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Demo',
-      routerDelegate: AutoRouterDelegate(
-        _appRouter,
-      ),
+      routerDelegate:
+          AutoRouterDelegate(_appRouter, initialRoutes: [SplashScreenRoute()]),
       routeInformationParser: _appRouter.defaultRouteParser(),
       theme: AppTheme.theme,
       debugShowCheckedModeBanner: false,

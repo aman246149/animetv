@@ -3,14 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'app_color.dart';
 
-
-
-
-class AppTheme{
+class AppTheme {
   AppTheme._();
 
   static ThemeData theme = ThemeData(
-    scaffoldBackgroundColor: const Color(0XFFF5F5F5),
+    scaffoldBackgroundColor: Colors.black,
     primaryColor: AppColors.primary,
     primarySwatch:
         MaterialColor(AppColors.primary.value, AppColors.primaryPallet),
@@ -21,7 +18,7 @@ class AppTheme{
   );
 
   static AppBarTheme appBarTheme = AppBarTheme(
-    color: Colors.white,
+    color: Colors.black,
     centerTitle: true,
     titleTextStyle: appBarTitleTheme,
     iconTheme: appBarIconTheme,
@@ -30,7 +27,7 @@ class AppTheme{
   );
 
   static IconThemeData appBarIconTheme = const IconThemeData(
-    color: AppColors.black,
+    color: AppColors.white,
   );
 
   static TextStyle appBarTitleTheme = const TextStyle();
@@ -48,12 +45,10 @@ class AppTheme{
       fontWeight: FontWeight.w600, fontSize: 12, color: Colors.black);
 
   static TextStyle bodyText1 = GoogleFonts.workSans(
-      fontWeight: FontWeight.w400, fontSize: 13, color: Colors.white);
+      fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white);
 
   static TextStyle bodyText2 = GoogleFonts.workSans(
-      fontWeight: FontWeight.w600,
-      fontSize: 13,
-      color: const Color(0xff1A1A1A));
+      fontWeight: FontWeight.w400, fontSize: 12, color: Colors.white);
 
   static ButtonStyle primaryTextButtonStyle = TextButton.styleFrom(
       padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 23),
