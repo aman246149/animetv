@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text("ANIME TV"),
+        title: Text("WHAT TO WATCH NEXT?"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -88,12 +88,18 @@ class _HomePageState extends State<HomePage> {
           Container(
             height: size.height / 2.5,
             width: double.infinity,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10)),
-                image: DecorationImage(
-                    image: NetworkImage(selectedImage), fit: BoxFit.cover)),
+            child: ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+              child: CachedNetworkImage(
+                imageUrl: selectedImage,
+                fit: BoxFit.cover,
+                placeholder: (_, val) => LoadingAnimationWidget.twistingDots(
+                  leftDotColor: Color.fromARGB(255, 255, 255, 255),
+                  rightDotColor: const Color(0xFFEA3799),
+                  size: 50,
+                ),
+              ),
+            ),
           ),
           Container(
             height: size.height / 2.5,

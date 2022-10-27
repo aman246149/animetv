@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void goToHomePage() {
-    Future.delayed(Duration(seconds: 0), () {
+    Future.delayed(Duration(seconds: 4), () {
       context.router.replaceAll([HomePageRoute()]);
     });
   }

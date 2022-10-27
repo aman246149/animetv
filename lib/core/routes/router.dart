@@ -1,13 +1,16 @@
-import 'package:animetv/features/homepage/screens/homepage.dart';
+
 import 'package:animetv/features/splashScreen/splash_screen.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 
+import '../../features/auth/presentation/screens/login_screen.dart';
+import '../../features/auth/presentation/screens/signup_screen.dart';
+import '../../features/homepage/presentation/screens/homepage.dart';
+
 @AdaptiveAutoRouter(replaceInRouteName: 'Screen', routes: [
   AutoRoute(path: '', page: SplashScreen, initial: true),
-  AutoRoute(
-    path: 'home',
-    page: HomePage,
-  )
+  AutoRoute(path: 'login', page: LoginScreen),
+  AutoRoute(path: 'signup', page: SignUp),
+  AutoRoute(path: 'home', page: HomePage),
 ])
 class $AppRouter {}
