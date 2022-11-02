@@ -1,8 +1,12 @@
 import 'package:animetv/core/images/app_images.dart';
+import 'package:animetv/core/modules/firebasemodules.dart';
 import 'package:animetv/core/routes/router.gr.dart';
+import 'package:animetv/features/auth/presentation/screens/auth_validation_screen.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get_it/get_it.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,8 +24,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void goToHomePage() {
-    Future.delayed(Duration(seconds: 4), () {
-      context.router.replaceAll([HomePageRoute()]);
+    Future.delayed(Duration(seconds: 0), () {
+      context.router.replaceAll([AuthValidationRoute(auth: GetIt.I<FirebaseAuth>())]);
     });
   }
 

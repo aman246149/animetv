@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "972027550217",
+    "project_id": "animetv-1ae1e",
+    "storage_bucket": "animetv-1ae1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972027550217:android:d92abed5ce0ae3e23db6d8",
+        "android_client_info": {
+          "package_name": "com.example.animetv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972027550217-co2fkpsg8g3uvrdeadccn3d4qpkqnh00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpW79ftDTlAplGjeWorZkSKbXfvkVa6cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972027550217-co2fkpsg8g3uvrdeadccn3d4qpkqnh00.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "972027550217-gsdc4vqrn8funbrrdunqevfot5sgjsg2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.animetv"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

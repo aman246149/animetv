@@ -5,10 +5,12 @@ class TextInputField extends StatelessWidget {
     Key? key,
     required this.controller,
     required this.text,
+    this.validator,
   }) : super(key: key);
 
   final TextEditingController controller;
   final String text;
+  final FormFieldValidator? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,11 @@ class TextInputField extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20.0),
         child: TextFormField(
           controller: controller,
-          decoration: InputDecoration(border: InputBorder.none, hintText: text),
+          validator: validator,
+          decoration: InputDecoration(
+              // filled: true
+              border: InputBorder.none,
+              hintText: text),
         ),
       ),
     );
