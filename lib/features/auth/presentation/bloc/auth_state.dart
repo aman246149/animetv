@@ -16,7 +16,7 @@ class AuthSignInSuccessFullState extends AuthState {}
 class AuthSignInFailureState extends AuthState {
   final String message;
 
-  AuthSignInFailureState(this.message);
+  const AuthSignInFailureState(this.message);
 
 }
 
@@ -27,6 +27,6 @@ class AuthSignUpSuccessFullState extends AuthState {}
 class AuthSignUpFailureState extends AuthState {
   final String message;
 
-  AuthSignUpFailureState(this.message);
+  const AuthSignUpFailureState(this.message);
 
 }

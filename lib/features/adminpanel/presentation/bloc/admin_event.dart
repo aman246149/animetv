@@ -10,6 +10,6 @@ abstract class AdminEvent extends Equatable {
 class SetAnimeDataEvent extends AdminEvent {
   final AnimeEntity anime;
 
-  SetAnimeDataEvent(this.anime);
+  const SetAnimeDataEvent(this.anime);
 
 }

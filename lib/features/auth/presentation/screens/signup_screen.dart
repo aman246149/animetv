@@ -65,7 +65,7 @@ class _SignUpState extends State<SignUp> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Vspace(20),
+                  const Vspace(20),
                   Text(
                     "Lets sign up .",
                     style: Theme.of(context)
@@ -73,7 +73,7 @@ class _SignUpState extends State<SignUp> {
                         .bodyText1!
                         .copyWith(color: Colors.white, fontSize: 30),
                   ),
-                  Vspace(10),
+                  const Vspace(10),
                   Text(
                     "Welcome.",
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
@@ -82,8 +82,8 @@ class _SignUpState extends State<SignUp> {
                         fontWeight: FontWeight.w200,
                         letterSpacing: 1),
                   ),
-                  Vspace(10),
-                  Vspace(80),
+                  const Vspace(10),
+                  const Vspace(80),
                   TextInputField(
                     controller: email,
                     text: "Email address",
@@ -94,7 +94,7 @@ class _SignUpState extends State<SignUp> {
                       return null;
                     },
                   ),
-                  Vspace(20),
+                  const Vspace(20),
                   TextInputField(
                     controller: password,
                     text: "Password",
@@ -105,10 +105,10 @@ class _SignUpState extends State<SignUp> {
                       return null;
                     },
                   ),
-                  Expanded(child: Vspace(0)),
+                  const Expanded(child: Vspace(0)),
                   GestureDetector(
                     onTap: () {
-                      context.router.popAndPush(LoginScreenRoute());
+                      context.router.popAndPush(const LoginScreenRoute());
                     },
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,

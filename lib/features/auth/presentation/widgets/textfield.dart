@@ -16,11 +16,12 @@ class TextInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 10,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(15))),
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0),
         child: TextFormField(
+          cursorColor: Colors.black,
           controller: controller,
           validator: validator,
           decoration: InputDecoration(

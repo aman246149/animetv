@@ -1,8 +1,6 @@
 import 'package:animetv/features/homepage/data/model/anime_model.dart';
-import 'package:animetv/features/homepage/data/repository/anime_repository.dart';
 import 'package:animetv/features/homepage/domain/animeusecase.dart';
 import 'package:bloc/bloc.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
 

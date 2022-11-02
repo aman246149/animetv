@@ -1,5 +1,6 @@
 import 'package:animetv/core/modules/firebasemodules.dart';
 import 'package:animetv/core/presentation/widgets/vspace.dart';
+import 'package:animetv/core/routes/router.gr.dart';
 import 'package:animetv/features/adminpanel/admin_constant.dart';
 import 'package:animetv/features/homepage/data/model/anime_model.dart';
 import 'package:animetv/features/homepage/presentation/bloc/anime_bloc.dart';
@@ -9,6 +10,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import "package:auto_route/auto_route.dart";
 
 import '../../../../core/utils/common_methods.dart';
 
@@ -66,7 +68,7 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: Visibility(
           visible: widget.auth.currentUser!.uid == adminId,
           child: FloatingActionButton(
-            onPressed: () {},
+            onPressed: () => context.router.push(UploadAnimePageqRoute()),
             child: Icon(Icons.add),
           ),
         ),

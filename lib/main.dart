@@ -2,7 +2,6 @@ import 'package:animetv/core/blocobserver/bloc_observer.dart';
 import 'package:animetv/core/dependencyInjection/di.dart';
 import 'package:animetv/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +40,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         title: 'Flutter Demo',
         routerDelegate:
-            AutoRouterDelegate(_appRouter, initialRoutes: [SplashScreenRoute()]),
+            AutoRouterDelegate(_appRouter, initialRoutes: [const SplashScreenRoute()]),
         routeInformationParser: _appRouter.defaultRouteParser(),
         theme: AppTheme.theme,
         debugShowCheckedModeBanner: false,

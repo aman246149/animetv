@@ -1,4 +1,3 @@
-import 'package:animetv/core/modules/firebasemodules.dart';
 import 'package:animetv/core/presentation/widgets/vspace.dart';
 import 'package:animetv/core/routes/router.gr.dart';
 import 'package:animetv/core/utils/common_methods.dart';
@@ -65,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Vspace(20),
+                  const Vspace(20),
                   Text(
                     "Lets sign you in.",
                     style: Theme.of(context)
@@ -73,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         .bodyText1!
                         .copyWith(color: Colors.white, fontSize: 30),
                   ),
-                  Vspace(10),
+                  const Vspace(10),
                   Text(
                     "Welcome back..",
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
@@ -82,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w200,
                         letterSpacing: 1),
                   ),
-                  Vspace(10),
+                  const Vspace(10),
                   Text(
                     "You've been missed!",
                     style: Theme.of(context).textTheme.bodyText1!.copyWith(
@@ -91,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w200,
                         letterSpacing: 1),
                   ),
-                  Vspace(80),
+                  const Vspace(80),
                   TextInputField(
                     controller: email,
                     text: "Email address",
@@ -102,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       return null;
                     },
                   ),
-                  Vspace(20),
+                  const Vspace(20),
                   TextInputField(
                     controller: password,
                     text: "Password",
@@ -113,10 +112,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       return null;
                     },
                   ),
-                  Expanded(child: Vspace(0)),
+                  const Expanded(child: Vspace(0)),
                   GestureDetector(
                     onTap: () {
-                      context.router.popAndPush(SignUpRoute());
+                      context.router.popAndPush(const SignUpRoute());
                     },
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,

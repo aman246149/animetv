@@ -14,11 +14,11 @@ class GetAnimeLoadingState extends AnimeState {}
 class GetAnimeSuccessFullState extends AnimeState {
   final List<AnimeModel> anime;
 
-  GetAnimeSuccessFullState(this.anime);
+  const GetAnimeSuccessFullState(this.anime);
 }
 
 class GetAnimeFailureState extends AnimeState {
   final String error;
 
-  GetAnimeFailureState(this.error);
+  const GetAnimeFailureState(this.error);
 }

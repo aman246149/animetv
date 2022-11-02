@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../../core/modules/firebasemodules.dart';
 
 class AuthValidation extends StatelessWidget {
   final FirebaseAuth auth;

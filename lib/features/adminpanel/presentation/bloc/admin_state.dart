@@ -16,6 +16,6 @@ class SetAnimeDataSuccessFullState extends AdminState {}
 class SetAnimeDataFailureState extends AdminState {
   final String error;
 
-  SetAnimeDataFailureState(this.error);
+  const SetAnimeDataFailureState(this.error);
 
 }

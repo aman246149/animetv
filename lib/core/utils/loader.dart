@@ -31,7 +31,7 @@ class LoadingWidget extends StatelessWidget {
         child: SizedBox(
       width: 50,
       child: LoadingAnimationWidget.twistingDots(
-        leftDotColor: Color.fromARGB(255, 255, 255, 255),
+        leftDotColor: const Color.fromARGB(255, 255, 255, 255),
         rightDotColor: const Color(0xFFEA3799),
         size: 50,
       ),
