@@ -51,7 +51,8 @@ class AppTheme {
       fontWeight: FontWeight.w400, fontSize: 12, color: Colors.white);
 
   static ButtonStyle primaryTextButtonStyle = TextButton.styleFrom(
-      foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 23),
+      foregroundColor: Colors.white,
+      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 23),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       backgroundColor: const Color(0XFF2689FB),
       textStyle: buttonTextStyle);

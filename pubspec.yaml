@@ -65,6 +65,7 @@ dependencies:
   cloud_functions: 4.0.3
   another_flushbar:
   vimeo_player_flutter: ^0.0.3+2
+  image_picker: ^0.8.6
 
 
   
