@@ -14,6 +14,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<AuthEvent>((event, emit) {});
     on<AuthSignInEvent>(handleAuthSignInEvent);
     on<AuthSignUpEvent>(handeAuthSignUpEvent);
+    on<AuthSighOut>(handeAuthSignOutEvent);
   }
 
   void handleAuthSignInEvent(
@@ -37,4 +38,17 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthSignUpFailureState(e.toString()));
     }
   }
+
+  void handeAuthSignOutEvent(
+      AuthSighOut event, Emitter<AuthState> emit) async {
+    try {
+      emit(AuthSignUpLoadingState());
+      await authUsecase.handleSignOut();
+      emit(AuthSignUpSuccessFullState());
+    } catch (e) {
+      emit(AuthSignUpFailureState(e.toString()));
+    }
+  }
 }
+
+

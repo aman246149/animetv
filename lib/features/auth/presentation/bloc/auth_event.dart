@@ -22,3 +22,5 @@ class AuthSignUpEvent extends AuthEvent {
   const AuthSignUpEvent(this.email, this.password);
 
 }
+
+class AuthSighOut extends AuthEvent{}

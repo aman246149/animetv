@@ -1,7 +1,9 @@
 import 'package:animetv/core/modules/firebasemodules.dart';
+import 'package:animetv/core/presentation/widgets/hspace.dart';
 import 'package:animetv/core/presentation/widgets/vspace.dart';
 import 'package:animetv/core/routes/router.gr.dart';
 import 'package:animetv/features/adminpanel/admin_constant.dart';
+import 'package:animetv/features/auth/presentation/widgets/button_widget.dart';
 import 'package:animetv/features/homepage/data/model/anime_model.dart';
 import 'package:animetv/features/homepage/presentation/bloc/anime_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -12,6 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import "package:auto_route/auto_route.dart";
 
+import '../../../../core/common_dialogs/about_us_dialogue.dart';
 import '../../../../core/utils/common_methods.dart';
 
 class HomePage extends StatefulWidget {
@@ -74,6 +77,14 @@ class _HomePageState extends State<HomePage> {
         ),
         appBar: AppBar(
           title: Text("WHAT TO WATCH NEXT?"),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  showDialogData(context);
+                },
+                icon: Icon(Icons.more_vert)),
+            Hspace(8)
+          ],
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),

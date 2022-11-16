@@ -1,5 +1,4 @@
-
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'anime_model.g.dart';
@@ -12,10 +11,11 @@ class AnimeModel {
   final String seasons;
   final String imageUrl;
 
-  AnimeModel(this.name, this.genere, this.rating, this.seasons,this.imageUrl);
 
- Map<String, dynamic> toJson() => _$AnimeModelToJson(this);
+  AnimeModel(this.name, this.genere, this.rating, this.seasons, this.imageUrl);
 
-   factory AnimeModel.fromJson(Map<String, dynamic> json) => _$AnimeModelFromJson(json);
+  Map<String, dynamic> toJson() => _$AnimeModelToJson(this);
 
+  factory AnimeModel.fromJson(Map<String, dynamic> json) =>
+      _$AnimeModelFromJson(json);
 }

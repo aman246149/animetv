@@ -19,7 +19,7 @@ import 'package:animetv/features/auth/presentation/screens/signup_screen.dart'
     as _i3;
 import 'package:animetv/features/homepage/presentation/screens/homepage.dart'
     as _i4;
-import 'package:animetv/features/homepage/presentation/screens/uploadAnimePage.dart'
+import 'package:animetv/features/adminpanel/presentation/screens/uploadAnimePage.dart'
     as _i6;
 import 'package:animetv/features/splashScreen/splash_screen.dart' as _i1;
 import 'package:auto_route/auto_route.dart' as _i7;

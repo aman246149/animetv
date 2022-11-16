@@ -12,6 +12,7 @@ AnimeEntity _$AnimeEntityFromJson(Map<String, dynamic> json) => AnimeEntity(
       json['rating'] as String?,
       json['seasons'] as String?,
       json['imageUrl'] as String?,
+      json['time'] as String,
     );
 
 Map<String, dynamic> _$AnimeEntityToJson(AnimeEntity instance) =>
@@ -21,4 +22,5 @@ Map<String, dynamic> _$AnimeEntityToJson(AnimeEntity instance) =>
       'rating': instance.rating,
       'seasons': instance.seasons,
       'imageUrl': instance.imageUrl,
+      'time': instance.time,
     };

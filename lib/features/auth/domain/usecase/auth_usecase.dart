@@ -23,4 +23,11 @@ class AuthUsecase {
       rethrow;
     }
   }
+  Future<dynamic> handleSignOut() async {
+    try {
+      await repository.signout();
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

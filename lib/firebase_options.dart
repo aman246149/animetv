@@ -17,19 +17,13 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -52,11 +46,30 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBsa4zYWyoDxZnR1kVbaDrh3WExKptACuI',
+    appId: '1:972027550217:web:e16fa3a9240f35b23db6d8',
+    messagingSenderId: '972027550217',
+    projectId: 'animetv-1ae1e',
+    authDomain: 'animetv-1ae1e.firebaseapp.com',
+    storageBucket: 'animetv-1ae1e.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDpW79ftDTlAplGjeWorZkSKbXfvkVa6cY',
     appId: '1:972027550217:android:d92abed5ce0ae3e23db6d8',
     messagingSenderId: '972027550217',
     projectId: 'animetv-1ae1e',
     storageBucket: 'animetv-1ae1e.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCUfsG1tNkLL2ikjgbcozsOpCfSU8k2Z-U',
+    appId: '1:972027550217:ios:feca0d789d9716673db6d8',
+    messagingSenderId: '972027550217',
+    projectId: 'animetv-1ae1e',
+    storageBucket: 'animetv-1ae1e.appspot.com',
+    iosClientId: '972027550217-gsdc4vqrn8funbrrdunqevfot5sgjsg2.apps.googleusercontent.com',
+    iosBundleId: 'com.example.animetv',
   );
 }

@@ -18,10 +18,19 @@ class AuthRepository {
       rethrow;
     }
   }
+
   Future<dynamic> signUp(LoginEntity loginEntity) async {
     try {
       await auth.createUserWithEmailAndPassword(
           email: loginEntity.email!, password: loginEntity.password!);
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<dynamic> signout() async {
+    try {
+      await auth.signOut();
     } catch (e) {
       rethrow;
     }

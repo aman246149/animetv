@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:animetv/core/presentation/widgets/vspace.dart';
 import 'package:animetv/features/adminpanel/domain/entity/anime_entity.dart';
 import 'package:animetv/features/adminpanel/presentation/bloc/admin_bloc.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -56,7 +57,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
     }
     context.read<AdminBloc>().add(SetAnimeDataEvent(
         AnimeEntity(name.text, genere.text, rating.text, season.text,
-            imageController.text),
+            imageController.text,Timestamp.now().toString()),
         pickedImage));
   }
 

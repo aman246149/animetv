@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'anime_entity.g.dart';
@@ -11,10 +12,17 @@ class AnimeEntity {
   final String? rating;
   final String? seasons;
   final String? imageUrl;
+  final String time ;
 
-
-  AnimeEntity(this.name, this.genere, this.rating, this.seasons, this.imageUrl,
-      );
+  AnimeEntity(
+    
+    this.name,
+    this.genere,
+    this.rating,
+    this.seasons,
+    this.imageUrl,
+    this.time
+  );
 
   Map<String, dynamic> toJson() => _$AnimeEntityToJson(this);
 

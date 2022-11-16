@@ -1,6 +1,6 @@
 
 import 'package:animetv/features/auth/presentation/screens/auth_validation_screen.dart';
-import 'package:animetv/features/homepage/presentation/screens/uploadAnimePage.dart';
+import 'package:animetv/features/adminpanel/presentation/screens/uploadAnimePage.dart';
 import 'package:animetv/features/splashScreen/splash_screen.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
