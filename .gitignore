@@ -46,3 +46,4 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 admin_constant.dart
+/android/app/release/upload-keystore.jks
