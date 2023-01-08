@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:animetv/features/homepage/data/model/anime_model.dart';
 import 'package:animetv/features/homepage/domain/animeusecase.dart';

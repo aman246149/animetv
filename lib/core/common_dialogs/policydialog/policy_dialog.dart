@@ -24,7 +24,7 @@ class PolicyDialog extends StatelessWidget {
         children: [
           Expanded(
             child: FutureBuilder(
-              future: Future.delayed(Duration(milliseconds: 150)).then((value) {
+              future: Future.delayed(const Duration(milliseconds: 150)).then((value) {
                 return rootBundle
                     .loadString('assets/privacyPolicy/$mdFileName');
               }),
@@ -34,7 +34,7 @@ class PolicyDialog extends StatelessWidget {
                     data: snapshot.data.toString(),
                   );
                 }
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               },

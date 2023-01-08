@@ -78,7 +78,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       uint8list == null
-                          ? SizedBox.shrink()
+                          ? const SizedBox.shrink()
                           : SizedBox(
                               height: 200,
                               width: 200,
@@ -107,7 +107,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                               })
                         ],
                       ),
-                      Vspace(12),
+                      const Vspace(12),
                       Row(
                         children: [
                           Expanded(
@@ -151,7 +151,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("UPLOAD ANIME DATA"),
+          title: const Text("UPLOAD ANIME DATA"),
         ),
         body: Form(
           key: _formKey,
@@ -171,7 +171,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                       return null;
                     },
                   ),
-                  Vspace(12),
+                  const Vspace(12),
                   TextInputField(
                     controller: genere,
                     text: "genere",
@@ -182,7 +182,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                       return null;
                     },
                   ),
-                  Vspace(12),
+                  const Vspace(12),
                   TextInputField(
                     controller: season,
                     text: "season",
@@ -193,7 +193,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                       return null;
                     },
                   ),
-                  Vspace(12),
+                  const Vspace(12),
                   TextInputField(
                     controller: rating,
                     text: "rating",
@@ -204,7 +204,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                       return null;
                     },
                   ),
-                  Vspace(12),
+                  const Vspace(12),
                   uint8list == null
                       ? Row(
                           children: [
@@ -214,7 +214,7 @@ class _UploadAnimePageqState extends State<UploadAnimePageq> {
                                     ontap: showBottomModel)),
                           ],
                         )
-                      : Container(
+                      : SizedBox(
                           height: 200,
                           width: 300,
                           child: Image.memory(uint8list!),

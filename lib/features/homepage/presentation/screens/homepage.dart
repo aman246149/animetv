@@ -1,9 +1,8 @@
-import 'package:animetv/core/modules/firebasemodules.dart';
+
 import 'package:animetv/core/presentation/widgets/hspace.dart';
 import 'package:animetv/core/presentation/widgets/vspace.dart';
 import 'package:animetv/core/routes/router.gr.dart';
-import 'package:animetv/features/adminpanel/admin_constant.dart';
-import 'package:animetv/features/auth/presentation/widgets/button_widget.dart';
+
 import 'package:animetv/features/homepage/data/model/anime_model.dart';
 import 'package:animetv/features/homepage/presentation/bloc/anime_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -75,44 +74,44 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: Visibility(
           visible: widget.auth.currentUser!.uid == adminId,
           child: FloatingActionButton(
-            onPressed: () => context.router.push(UploadAnimePageqRoute()),
-            child: Icon(Icons.add),
+            onPressed: () => context.router.push(const UploadAnimePageqRoute()),
+            child: const Icon(Icons.add),
           ),
         ),
         appBar: AppBar(
-          title: Text("WHAT TO WATCH NEXT?"),
+          title: const Text("WHAT TO WATCH NEXT?"),
           actions: [
             IconButton(
                 onPressed: () {
                   showDialogData(context);
                 },
-                icon: Icon(Icons.more_vert)),
-            Hspace(8)
+                icon: const Icon(Icons.more_vert)),
+            const Hspace(8)
           ],
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Stack(children: [
-            Container(
+            SizedBox(
               height: size.height,
               width: double.infinity,
             ),
-            Container(
+            SizedBox(
               height: size.height / 2.5,
               width: double.infinity,
               child: ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(12)),
+                borderRadius: const BorderRadius.all(Radius.circular(12)),
                 child: CachedNetworkImage(
                   imageUrl: selectedImage ?? "",
                   fit: BoxFit.cover,
                   errorWidget: (context, url, error) =>
                       LoadingAnimationWidget.twistingDots(
-                    leftDotColor: Color.fromARGB(255, 255, 255, 255),
+                    leftDotColor: const Color.fromARGB(255, 255, 255, 255),
                     rightDotColor: const Color(0xFFEA3799),
                     size: 50,
                   ),
                   placeholder: (_, val) => LoadingAnimationWidget.twistingDots(
-                    leftDotColor: Color.fromARGB(255, 255, 255, 255),
+                    leftDotColor: const Color.fromARGB(255, 255, 255, 255),
                     rightDotColor: const Color(0xFFEA3799),
                     size: 50,
                   ),
@@ -141,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.2),
                     ),
-                    Vspace(8),
+                    const Vspace(8),
                     Text(
                       genere,
                       style: Theme.of(context)
@@ -149,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                           .bodyText2!
                           .copyWith(fontSize: 16),
                     ),
-                    Vspace(8),
+                    const Vspace(8),
                     Text(
                       "Seasons $season",
                       style: Theme.of(context)
@@ -157,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                           .bodyText2!
                           .copyWith(fontSize: 16),
                     ),
-                    Vspace(8),
+                    const Vspace(8),
                     Text(
                       "Rating $rating",
                       style: Theme.of(context)
@@ -201,17 +200,17 @@ class _HomePageState extends State<HomePage> {
                       return GestureDetector(
                         child: Container(
                           width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          padding: EdgeInsets.all(8.0),
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            borderRadius: const BorderRadius.all(Radius.circular(12)),
                             child: CachedNetworkImage(
                               imageUrl: i.imageUrl,
                               fit: BoxFit.cover,
                               placeholder: (_, val) =>
                                   LoadingAnimationWidget.twistingDots(
                                 leftDotColor:
-                                    Color.fromARGB(255, 255, 255, 255),
+                                    const Color.fromARGB(255, 255, 255, 255),
                                 rightDotColor: const Color(0xFFEA3799),
                                 size: 50,
                               ),

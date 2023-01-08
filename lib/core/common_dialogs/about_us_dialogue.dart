@@ -6,7 +6,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/homepage/presentation/screens/homepage.dart';
+
 import '../presentation/widgets/vspace.dart';
 
 void showDialogData(BuildContext context) {
@@ -43,7 +43,7 @@ void showDialogData(BuildContext context) {
                       );
                     },
                   ),
-                  Vspace(8),
+                  const Vspace(8),
                   DialogRowWidget(
                     context: context,
                     icon: Icons.control_point_duplicate_outlined,
@@ -59,7 +59,7 @@ void showDialogData(BuildContext context) {
                       );
                     },
                   ),
-                  Vspace(8),
+                  const Vspace(8),
                   DialogRowWidget(
                     context: context,
                     icon: Icons.person,
@@ -70,7 +70,7 @@ void showDialogData(BuildContext context) {
                           "This app is made for people who want to watch best seies without wasting any time in searching for good series .");
                     },
                   ),
-                  Vspace(8),
+                  const Vspace(8),
                   DialogRowWidget(
                     context: context,
                     text: "Acknowledgment",
@@ -81,18 +81,18 @@ void showDialogData(BuildContext context) {
                           "Thanks you.. unsplash ,pexels,pixabay,freepick,https://wall.alphacoders.com/ (wall alphacoder) and other respective websites");
                     },
                   ),
-                  Vspace(8),
+                  const Vspace(8),
                   DialogRowWidget(
                     context: context,
                     text: "Sign Out",
                     icon: Icons.logout_outlined,
                     ontap: () {
                       context.read<AuthBloc>().add(AuthSighOut());
-                      context.router.replaceAll([LoginScreenRoute()]);
+                      context.router.replaceAll([const LoginScreenRoute()]);
                     },
                   ),
-                  Vspace(8),
-                  Vspace(4),
+                  const Vspace(8),
+                  const Vspace(4),
                 ],
               ),
             )
