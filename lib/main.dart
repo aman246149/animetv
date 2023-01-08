@@ -15,11 +15,13 @@ import 'features/adminpanel/presentation/bloc/admin_bloc.dart';
 import 'features/homepage/presentation/bloc/anime_bloc.dart';
 import 'firebase_options.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   EquatableConfig.stringify = true;
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   //Remove this method to stop OneSignal Debugging
+  await dotenv.load(fileName: ".env");
   OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
 
   OneSignal.shared.setAppId("0259a4f7-487d-4eaf-9712-eaacb58c3f2e");

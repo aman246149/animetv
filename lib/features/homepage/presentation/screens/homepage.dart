@@ -11,6 +11,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import "package:auto_route/auto_route.dart";
 
@@ -32,9 +33,11 @@ class _HomePageState extends State<HomePage> {
   String season = "";
   String rating = "";
   String? selectedImage;
+  String adminId = "";
 
   @override
   void initState() {
+    adminId = dotenv.env['ADMIN_ID']!;
     context.read<AnimeBloc>().add(GetAnimeEvent());
     selectedImage =
         "https://img.freepik.com/free-vector/gradient-japanese-architecture-temple-illustration_52683-44723.jpg?w=900&t=st=1666847864~exp=1666848464~hmac=605327792b10723766bc7e2ee25d324b01f249639f674c03bc6fe319d7d898fa";
