@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
   String rating = "";
   String? selectedImage;
   String adminId = "";
+  String newTitle = "";
 
   @override
   void initState() {
